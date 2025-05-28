@@ -28,7 +28,7 @@ jobs:
           args: run -d . -t /data/docs
   
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@4.x
         with:
           path: 'docs'
   
