@@ -23,9 +23,7 @@ jobs:
           fetch-depth: 0
           
       - name: Generate PHPDoc Documentation
-        uses: docker://phpdoc/phpdoc:latest
-        with:
-          args: run -d . -t /data/docs
+        run: docker run --rm -v ${{ github.workspace }}:/data phpdoc/phpdoc:latest run -d . -t /data/docs
   
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
