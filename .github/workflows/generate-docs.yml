@@ -23,7 +23,7 @@ jobs:
         fetch-depth: 0
         
     generate-docs:
-     name: Generate PHPDoc Documentation
+      name: Generate PHPDoc Documentation
       uses: docker://phpdoc/phpdoc:latest
       with:
         args: run -d . -t /data/docs
