@@ -18,7 +18,7 @@ jobs:
     steps:
     
       - name: Checkout code
-        uses: actions/checkout@4.x
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           
@@ -28,11 +28,11 @@ jobs:
           args: run -d . -t /data/docs
   
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@4.x
+        uses: actions/upload-pages-artifact@v3
         with:
           path: 'docs'
   
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@4.x
+        uses: actions/deploy-pages@v4
       
